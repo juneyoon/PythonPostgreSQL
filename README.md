@@ -1,6 +1,6 @@
 
 
-## **Introduction of Reporting Tool**
+## **Introduction of the Reporting Tool**
 
 ## **Generated contents**
 
