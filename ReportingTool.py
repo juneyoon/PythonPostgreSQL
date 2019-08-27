@@ -3,9 +3,11 @@ import psycopg2
 conn = None
 
     # connect database
-
-conn = psycopg2.connect("dbname=news")
-
+try:
+    conn = psycopg2.connect("dbname=news")
+except psycopg2.Error as e:
+    print(e.diag.message_detail)
+    sys.exit(1)
 cur = conn.cursor()
 
     # Q1: select the most popular three articles
