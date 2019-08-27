@@ -28,12 +28,13 @@ Query : SELECT path, count(id) FROM log WHERE length(path) > 2 GROUP BY path ORD
 
 ## How to run the reporting tool
 
-
-1. open terminal in mac
-2. run vagrant
-vagrant up
-vagrant ssh
-cd /vagrant
-3. run the application
+1. install Python version 2 or 3
+2. install VirtualBox
+3. install Vagrant
+4. setup the news database
+5. vagrant up
+6. vagrant ssh
+7. cd /vagrant
+8. run the application
 **python ReportingTool.py**
 
