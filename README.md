@@ -30,11 +30,17 @@ Query : SELECT path, count(id) FROM log WHERE length(path) > 2 GROUP BY path ORD
 
 1. install Python version 2 or 3
 2. install VirtualBox
+	download from here (https://www.virtualbox.org/wiki/Downloads)
 3. install Vagrant
-4. setup the news database
-5. vagrant up
-6. vagrant ssh
-7. cd /vagrant
-8. run the application
+	download from here (https://www.vagrantup.com/downloads.html)
+4. setup the news database (PostgreSQL) : 
+	sudo apt-get install postgresql 
+	refer to https://www.python.org/dev/peps/pep-0249/ and http://initd.org/psycopg/docs/
+5. setup vagrant and run
+	vagrant init ubuntu/trusty64
+	vagrant up
+6. log into the Linux instance
+	vagrant ssh
+7. run the application
 **python ReportingTool.py**
 
