@@ -1,0 +1,58 @@
+('Ursula La Multa', '4794456')
+('Rudolf von Treppenwitz', '2397228')
+('Markoff Chaney', '1198614')
+day of more than 1% of requests lead to errors : (datetime.date(2016, 7, 17),)
+vagrant@vagrant:/vagrant$ python ReportingTool.py
+the most popular three articles are
+candidate-is-jerk : 338647 views
+bears-love-berries : 253801 views
+bad-things-gone : 170098 views
+Who are the most popular article authors of all time?
+Traceback (most recent call last):
+  File "ReportingTool.py", line 29, in <module>
+    print(str(row[0]), row[1] + "views" )
+TypeError: unsupported operand type(s) for +: 'long' and 'str'
+vagrant@vagrant:/vagrant$ python ReportingTool.py
+the most popular three articles are
+candidate-is-jerk : 338647 views
+bears-love-berries : 253801 views
+bad-things-gone : 170098 views
+Who are the most popular article authors of all time?
+('Ursula La Multa', '4794456views')
+('Rudolf von Treppenwitz', '2397228views')
+('Markoff Chaney', '1198614views')
+day of more than 1% of requests lead to errors : (datetime.date(2016, 7, 17),)
+vagrant@vagrant:/vagrant$ pycodestyle Reportingtool.py
+Reportingtool.py:29:45: E202 whitespace before ')'
+Reportingtool.py:37:13: W292 no newline at end of file
+vagrant@vagrant:/vagrant$ clear
+
+vagrant@vagrant:/vagrant$ pycodestyle ReportingTool.py
+vagrant@vagrant:/vagrant$ python ReportingTool.py
+the most popular three articles are
+candidate-is-jerk : 338647 views
+bears-love-berries : 253801 views
+bad-things-gone : 170098 views
+Who are the most popular article authors of all time?
+('Ursula La Multa', '4794456views')
+('Rudolf von Treppenwitz', '2397228views')
+('Markoff Chaney', '1198614views')
+day of more than 1% of requests lead to errors : (datetime.date(2016, 7, 17),)
+vagrant@vagrant:/vagrant$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
