@@ -21,7 +21,7 @@ The goal is to build a reporting tool that summarizes data from a large database
 ## Running code
 1. vagrant up
 2. vagrant ssh
-3. run the application
+3. run the application </br>
    python ReportingTool.py 
 
 ## License
