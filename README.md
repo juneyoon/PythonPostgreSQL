@@ -2,7 +2,7 @@
 
 ## **Logs Analysis Project**
 
-It's part of a project from Udacity Fullstack Developer course. 
+It's part of a project from Udacity Fullstack Developer course. <br/>
 The goal is to build a reporting tool that summarizes data from a large database.
 
 ## **Getting Started**
