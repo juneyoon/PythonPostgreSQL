@@ -15,7 +15,7 @@ The goal is to build a reporting tool that summarizes data from a large database
 3. setup the news database (PostgreSQL) : 
 	sudo apt-get install postgresql 
 	refer to https://www.python.org/dev/peps/pep-0249/ and http://initd.org/psycopg/docs/
-4. setup vagrant and run (https://github.com/udacity/fullstack-nanodegree-vm)
+4. setup vagrant and run (https://github.com/udacity/fullstack-nanodegree-vm) <br/>
 	vagrant init ubuntu/trusty64
 	
 ## Running code
