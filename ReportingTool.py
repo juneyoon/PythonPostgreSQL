@@ -17,17 +17,16 @@ print("the most popular three articles are")
 for row in rows:
     print(row[0].split('/', 2)[-1] + ' : ' + str(row[1]) + ' views')
 
-cur.execute("""WITH AUTH AS (select path, count(id) from log
-where length(path) > 2 group by path order by count(id) desc limit 1)
-select authors.name from authors where authors.id =
-(select distinct articles.author from articles, AUTH
-where articles.title ~ split_part(REGEXP_REPLACE(AUTH.path,'/','-'),
-'-', 3)) ;""")
+cur.execute("""select authors.name, count(log.id) as View
+from authors, articles, log where articles.author = authors.id
+and length(path) > 2 and authors.name not like 'Anonymous%'
+group by authors.name order by count(log.id) desc;""")
 
 rows = cur.fetchall()
 
+print("Who are the most popular article authors of all time?")
 for row in rows:
-    print("the most popular article author " + str(rows[0]))
+    print(str(row[0]), str(row[1]) + "views")
 
 cur.execute("""select time::date from log where status not like '200 OK'
 group by time::date order by count(status) DESC limit 1;""")
